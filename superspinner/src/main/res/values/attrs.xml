@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SuperSpinnerView">
+
+        <!-- showing the default view as preview -->
+        <attr name="ssvDefaultPreview" format="boolean" />
+
+        <!-- Sets an arrow drawable. -->
+        <attr name="ssvArrow" format="reference" />
+
+        <!-- Sets the visibility of the arrow. -->
+        <attr name="ssvArrowShow" format="boolean" />
+
+        <!-- The gravity of the arrow. -->
+        <attr name="ssvArrowGravity" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+
+        <!-- Sets a tint color of the arrow. -->
+        <attr name="ssvArrowTint" format="color|reference" />
+
+        <!-- Shows arrow rotation animation when showing. -->
+        <attr name="ssvArrowAnimation" format="boolean" />
+
+        <!-- The duration of the arrow animation. -->
+        <attr name="ssvArrowAnimationDuration" format="integer" />
+
+        <!-- Sets the items of the menu. -->
+        <attr name="ssvArray" format="reference" />
+
+        <!-- Set the text size of the items. -->
+        <attr name="ssvItemTextSize" format="reference" />
+
+        <!-- Set the text color of the items. -->
+        <attr name="ssvItemTextColor" format="reference" />
+
+        <!-- Set the text gravity of the items. -->
+        <attr name="ssvItemTextGravity" format="enum">
+            <enum name="start" value="0" />
+            <enum name="center" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+
+        <!-- showing a ripple effect when hovering on the items -->
+        <attr name="ssvItemRipple" format="boolean" />
+
+        <!-- Sets the visibility of the divider. -->
+        <attr name="ssvItemDividerShow" format="boolean" />
+
+        <!-- Set the height size of the divider. -->
+        <attr name="ssvItemDividerHeight" format="dimension" />
+
+        <!-- Set the color of the divider. -->
+        <attr name="ssvItemDividerColor" format="reference" />
+
+    </declare-styleable>
+</resources>
