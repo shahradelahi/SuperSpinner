@@ -1,5 +1,5 @@
 /*
- * Designed and developed by 2021 Litehex Ltd (Shahrad Elahi)
+ * Designed and developed by 2021 Litehex (Shahrad Elahi)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -121,7 +121,7 @@ public class SuperSpinnerView extends ConstraintLayout {
                         makeAnimatedRotation(imvArrow, ssvArrowAnimationDuration, 0.0f, -180.0f);
                     }
                 }
-                mOnShowingListener.onShow();
+                if (mOnShowingListener != null) mOnShowingListener.onShow();
                 showSheet();
             }
         });
