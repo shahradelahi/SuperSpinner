@@ -1,47 +1,32 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.dokka'
-    id 'com.vanniktech.maven.publish'
-}
-
+apply plugin: 'com.android.library'
 apply from: "$rootDir/dependencies.gradle"
 
 android {
-
     compileSdkVersion versions.compileSdk
-
     defaultConfig {
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.versionCode
-        versionName versions.versionName
+        versionName "$versions.versionName"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
-
-    buildFeatures {
-        viewBinding true
-        buildConfig false
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
 }
 
 dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidxAppcompat"
     implementation "com.google.android.material:material:$versions.googleMaterial"
-    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
 }

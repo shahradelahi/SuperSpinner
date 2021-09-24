@@ -1,22 +1,17 @@
-plugins {
-    id 'com.android.application'
-}
-
+apply plugin: 'com.android.application'
 apply from: "$rootDir/dependencies.gradle"
 
 android {
-    compileSdk 31
-
+    compileSdkVersion versions.compileSdk
     defaultConfig {
         applicationId "com.litehex.superspinner"
-        minSdk 21
-        targetSdk 31
-        versionCode 100
-        versionName "1.0.0"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode versions.versionCode
+        versionName "$versions.versionName"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -32,6 +27,5 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidxAppcompat"
     implementation "com.google.android.material:material:$versions.googleMaterial"
-    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
     implementation project(":superspinner")
 }
