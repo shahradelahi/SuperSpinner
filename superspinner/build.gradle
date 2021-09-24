@@ -1,9 +1,6 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.dokka'
-    id 'com.vanniktech.maven.publish'
-}
-
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'com.vanniktech.maven.publish'
 apply from: "$rootDir/dependencies.gradle"
 
 android {
