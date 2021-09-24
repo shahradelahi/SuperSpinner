@@ -205,8 +205,16 @@ public class SuperSpinnerView extends ConstraintLayout {
             txtTitle.setText(items[position]);
             View swv = holder.findViewById(R.id.item_divider);
             if (ssvItemDividerShow) {
+
+                // setting styles
                 swv.setBackgroundColor(ssvItemDividerColor);
                 swv.getLayoutParams().height = ssvItemDividerHeight;
+
+                // Hiding last divider
+                if (position == items.length - 1) {
+                    swv.setVisibility(View.GONE);
+                }
+
             } else {
                 swv.setVisibility(View.GONE);
             }
