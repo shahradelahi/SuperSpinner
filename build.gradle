@@ -1,28 +1,22 @@
 buildscript {
-
     apply from: "$rootDir/dependencies.gradle"
-
     repositories {
         google()
         mavenCentral()
     }
-
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.2"
+        classpath "com.android.tools.build:gradle:$versions.gradleBuildTool"
         classpath "com.diffplug.spotless:spotless-plugin-gradle:$versions.spotlessGradle"
         classpath "com.vanniktech:gradle-maven-publish-plugin:$versions.mavenPublish"
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:$versions.dokkaGradle"
     }
-
 }
 
 allprojects {
-
     repositories {
         google()
         mavenCentral()
     }
-
 }
 
 task clean(type: Delete) {

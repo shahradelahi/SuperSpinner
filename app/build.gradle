@@ -2,9 +2,7 @@ apply plugin: 'com.android.application'
 apply from: "$rootDir/dependencies.gradle"
 
 android {
-
-    compileSdkVersion versions.compileSdk
-
+    compileSdk versions.compileSdk
     defaultConfig {
         applicationId "com.litehex.superspinner"
         minSdkVersion versions.minSdk
@@ -14,19 +12,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
 }
 
 dependencies {
