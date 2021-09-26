@@ -1,22 +1,16 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.dokka'
-apply plugin: 'com.vanniktech.maven.publish'
 apply from: "$rootDir/dependencies.gradle"
 
 android {
-    compileSdk versions.compileSdk
+    compileSdkVersion versions.compileSdk
     defaultConfig {
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.versionCode
-        versionName versions.versionName
+        versionName "$versions.versionName"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-    }
-    buildFeatures {
-        viewBinding true
-        buildConfig false
     }
     buildTypes {
         release {
@@ -33,6 +27,6 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$versions.androidxAppcompat"
     implementation "com.google.android.material:material:$versions.googleMaterial"
-    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
 }

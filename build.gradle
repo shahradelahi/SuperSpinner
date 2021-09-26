@@ -6,9 +6,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$versions.gradleBuildTool"
-        classpath "com.diffplug.spotless:spotless-plugin-gradle:$versions.spotlessGradle"
-        classpath "com.vanniktech:gradle-maven-publish-plugin:$versions.mavenPublish"
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:$versions.dokkaGradle"
     }
 }
 
